@@ -77,17 +77,18 @@ export default function SignUpPage() {
     if (formData.password !== formData.confirmPassword) return alert('비밀번호가 일치하지 않습니다.')
 
     setLoading(true)
-    const { data, error } = await supabase.auth.signUp({
-      email: formData.email,
-      password: formData.password,
-      options: {
-        data: {
-          full_name: formData.name,
-          login_id: formData.loginId,
-          phone_number: formData.phone
-        }
+  const { error } = await supabase.auth.signUp({
+    email: formData.email,
+    password: formData.password,
+    options: {
+      data: {
+        // 이 키값들이 중요합니다 (SQL의 NEW.raw_user_meta_data->>'...')
+        full_name: formData.name,
+        login_id: formData.loginId,
+        phone_number: formData.phone
       }
-    })
+    }
+  })
 
     if (error) {
       alert(error.message)

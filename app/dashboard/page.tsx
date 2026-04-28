@@ -55,7 +55,7 @@ export default function Dashboard() {
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto', fontFamily: 'sans-serif' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-        <h2 style={{ margin: 0 }}>DashBoard</h2>
+        <h2 style={{ margin: 0 }}> </h2>
         <span><strong>{userName}</strong> 님 환영합니다</span>
       </header>
 
@@ -64,7 +64,7 @@ export default function Dashboard() {
           onClick={() => router.push('/dashboard/new-audit')}
           style={{ 
             padding: '25px', borderRadius: '12px', border: 'none', 
-            backgroundColor: '#32f5d4', color: '#000', fontSize: '18px', fontWeight: 'bold', 
+            backgroundColor: '#60ebd4', color: '#000', fontSize: '18px', fontWeight: 'bold', 
             cursor: 'pointer', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' 
           }}
         >
@@ -72,12 +72,13 @@ export default function Dashboard() {
         </button>
 
         <button 
+        onClick={() => router.push('/admin/analysis-history')}
           style={{ 
             padding: '20px', borderRadius: '12px', border: '1px solid #ddd', 
             backgroundColor: '#fff', color: '#333', fontSize: '16px', cursor: 'pointer' 
           }}
         >
-          📋 과거 분석 내역 확인 (준비중)
+          📋 과거 분석 내역
         </button>
 
         <button 

@@ -60,7 +60,7 @@ export default function FindIdPage() {
         ) : (
           <div style={{ textAlign: 'center' }}>
             <p style={{ marginBottom: '10px', fontSize: '20px' }}>아이디: <strong>{foundUser.login_id}</strong></p>
-            <button onClick={goToResetPw} style={secondaryBtnStyle}>비밀번호 재설정하기</button>
+            <button onClick={goToResetPw} style={primaryBtnStyle}>비밀번호 재설정하기</button>
           </div>
         )}
         <button onClick={() => router.push('/login')} style={grayBtnStyle}>취소하기</button>
