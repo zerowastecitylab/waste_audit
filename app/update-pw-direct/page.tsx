@@ -116,7 +116,7 @@ export default function UpdatePwDirectPage() {
             disabled={loading || !password || password !== confirmPassword} 
             style={primaryBtnStyle as any}
           >
-            {loading ? '변경 처리 중...' : '비밀번호 변경 완료'}
+            {loading ? '변경 처리 중...' : '비밀번호 변경'}
           </button>
         </form>
         
